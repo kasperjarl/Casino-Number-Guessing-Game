@@ -39,7 +39,6 @@ double getBet(Player player)
 			continue;
 		}
 
-		// I need to check if the player is betting more than they have
 		if (bet > player.getMoney())
 		{
 			std::cout << "You don't have enough money for that bet. Please try again.\n";
@@ -89,7 +88,6 @@ void game(Player player, int difficulty)
 {
 	std::cout << "Welcome " << player.getName() << '\n';
 
-	// I need to keep track of the money 
 	if (player.getMoney() <= 0) {
 		std::cout << "\nYou're out of money.\n";
 		return;
@@ -97,14 +95,10 @@ void game(Player player, int difficulty)
 
 	double bet{ getBet(player) };
 
-	std::cout << "Then you can win: " << getPossibleReward(bet, difficulty) << "$\n";
-
+	// I need to keep track of the money 
+	// I need to check if the player is betting more than they have
 	// I need to check if their guess == answer
-	if (guess() == answer())
-	{
-		// I'm running into a problem with my function here. 
-		player.setMoney()
-	}
-
 	// I need to add/subtract money depeding on them being right or not
+
+	std::cout << "Then you can win: " << getPossibleReward(bet, difficulty) << "$\n";
 }

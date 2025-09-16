@@ -2,4 +2,7 @@
 #include <iostream>
 #include "player.h"
 
- void game(Player player);
+
+int getDifficulty();
+
+void game(Player player, int difficulty);

@@ -20,7 +20,7 @@ int main()
 
 	Player test;
 
-	game(test);
+	game(test, getDifficulty());
 
 	return 0;
 }
