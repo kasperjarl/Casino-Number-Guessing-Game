@@ -36,8 +36,7 @@ public:
 		return name;
 	}
 
-	// I think I need a default parameter, so I can use the same func
-	// to adjust the money. Or should I just create a new "adjustMoney" func?
+
 	double setMoney()
 	{
 		while (true)
@@ -62,6 +61,12 @@ public:
 	double getMoney()
 	{
 		return m_money;
+	}
+
+	void adjustMoney(double amount)
+	{
+		m_money += amount;
+		std::cout << "\n--> Your balance is now: " << m_money << "$.\n";
 	}
 
 
